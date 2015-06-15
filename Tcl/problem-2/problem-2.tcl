@@ -6,10 +6,10 @@ set sum 0
 set current 1
 set last 1
 while { $current < 4000000 } {
-    set new [expr {$current + $last}]
-    if { $new % 2 == 0 } {
-        incr sum $new
+    if { $current % 2 == 0 } {
+        incr sum $current
     }
+    set new [expr {$current + $last}]
     set last $current
     set current $new
 }
